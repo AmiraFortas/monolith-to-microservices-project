@@ -16,7 +16,7 @@ npm run dev
 ```
 
 ### Verification
-Once this command is run successfully, visit the `http://localhost:8080/api/v0/feed` in your web browser to verify that the application is running. You should see a JSON payload.
+Once this command is run successfully, visit the `http://127.0.0.1:8080/api/v0/feed` in your web browser to verify that the application is running. You should see a JSON payload.
 
 ## Frontend App
 ### Download Dependencies
@@ -33,7 +33,7 @@ ionic serve
 > Note: If you don't have Ionic CLI installed already, revisit the prerequisites in the previous section for setup instructions.
 
 ### Verification
-Visit `http://localhost:8100` in your web browser to verify that the application is running. You should see a web interface.
+Visit `http://127.0.0.1:8100` in your web browser to verify that the application is running. You should see a web interface.
 
 ___
 

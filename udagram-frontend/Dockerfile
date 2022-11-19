@@ -5,7 +5,8 @@ WORKDIR /usr/src/app
 # Install app dependencies
 # A wildcard is used to ensure both package.json AND package-lock.json are copied
 COPY package*.json ./
-RUN npm ci
+RUN npm ci -f
+RUN npm i -D typescript@3.4.5
 # Bundle app source
 COPY . .
 RUN ionic build

@@ -234,7 +234,7 @@ setx AWS_BUCKET test-nd9990-dev-wc
 setx AWS_REGION us-east-1
 setx AWS_PROFILE nd9990
 setx JWT_SECRET hello
-setx URL http://localhost:8100
+setx URL http://127.0.0.1:8100
 ```
 
 # Get Started!

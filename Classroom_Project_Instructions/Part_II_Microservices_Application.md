@@ -133,7 +133,7 @@ http {
     }
 }
 ```
-The Nginx container will expose 8080 port. The configuration file above, in the `server` section, it will route the *http://localhost:8080/api/v0/feed* requests to the *backend-user:8080* container. The same applies for the *http://localhost:8080/api/v0/users* requests.
+The Nginx container will expose 8080 port. The configuration file above, in the `server` section, it will route the *http://127.0.0.1:8080/api/v0/feed* requests to the *backend-user:8080* container. The same applies for the *http://127.0.0.1:8080/api/v0/users* requests.
 
 
 ### Current Directory Structure
@@ -185,6 +185,6 @@ docker-compose -f docker-compose-build.yaml build --parallel
 docker-compose up
 ```
 
-4. Visit http://localhost:8100 in your web browser to verify that the application is running. 
+4. Visit http://127.0.0.1:8100 in your web browser to verify that the application is running. 
 
 
