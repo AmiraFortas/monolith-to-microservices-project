@@ -71,6 +71,8 @@ Launch the frontend app locally.
     ```
 * You can visit `http://127.0.0.1:8100` in your web browser to verify that the application is running. You should see a web interface.
 
+
+
 ## Tips
 1. Take a look at `udagram-api` -- does it look like we can divide it into two modules to be deployed as separate microservices?
 2. The `.dockerignore` file is included for your convenience to not copy `node_modules`. Copying this over into a Docker container might cause issues if your local environment is a different operating system than the Docker image (ex. Windows or MacOS vs. Linux).
@@ -84,3 +86,41 @@ Launch the frontend app locally.
     ```
 4. `set_env.sh` is really for your backend application. Frontend applications have a different notion of how to store configurations. Configurations for the application endpoints can be configured inside of the `environments/environment.*ts` files.
 5. In `set_env.sh`, environment variables are set with `export $VAR=value`. Setting it this way is not permanent; every time you open a new terminal, you will have to run `set_env.sh` to reconfigure your environment variables. To verify if your environment variable is set, you can check the variable with a command like `echo $POSTGRES_USERNAME`.
+
+
+
+### Use Docker compose to build and run multiple Docker containers
+
+> **Note**: The ultimate objective of this step is to have the Docker images for each microservice ready locally. This step can also be done manually by building and running containers one by one. 
+
+
+1. Once you have created the Dockerfile in each of the following services directories, you can use the `docker-compose` command to build and run multiple Docker containers at once.
+
+   - */project/udagram-api-feed/* 
+   - */project/udagram-api-feed/* 
+   - */project/udagram-frontend/* 
+   - */project/udagram-reverseproxy/*
+
+ The `docker-compose`  <a href="https://docs.docker.com/compose/" target="_blank">command</a> uses a YAML file to configure your application’s services in one go. Meaning, you create and start all the services from your configuration file, with a single command. Otherwise, you will have to individually build containers one-by-one for each of your services. 
+
+
+
+2. **Create Images** - In the project's parent directory, create a [docker-compose-build.yaml](https://video.udacity-data.com/topher/2021/July/60e28b72_docker-compose-build/docker-compose-build.yaml) file. It will create an image for each individual service. Then, you can run the following command to create images locally:
+```bash
+# Make sure the Docker services are running in your local machine
+# Remove unused and dangling images
+docker image prune --all
+# Run this command from the directory where you have the "docker-compose-build.yaml" file present
+docker-compose -f docker-compose-build.yaml build --parallel
+```
+>**Note**: YAML files are extremely indentation sensitive, that's why we have attached the files for you. 
+
+
+3. **Run containers** using the images created in the step above. Create another YAML file, [docker-compose.yaml](https://video.udacity-data.com/topher/2021/July/60e28b91_docker-compose/docker-compose.yaml),  in the project's parent directory. It will use the existing images and create containers. While creating containers, it defines the port mapping, and the container dependency. 
+
+ Once you have the YAML file above ready in your project directory, you can start the application using:
+```bash
+docker-compose up
+```
+
+4. Visit http://127.0.0.1:8100 in your web browser to verify that the application is running. 
