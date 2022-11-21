@@ -28,7 +28,7 @@ Create a PostgreSQL database either locally or on AWS RDS. The database is used 
 * The port number will need to be set as `5432`. This is the typical port that is used by PostgreSQL so it is usually set to this port by default.
 
 Once your database is set up, set the config values for environment variables prefixed with `POSTGRES_` in `set_env.sh`.
-* If you set up a local database, your `POSTGRES_HOST` is most likely `127.0.0.1`
+* If you set up a local database, your `POSTGRES_HOST` is most likely `localhost`
 * If you set up an RDS database, your `POSTGRES_HOST` is most likely in the following format: `***.****.us-west-1.rds.amazonaws.com`. You can find this value in the AWS console's RDS dashboard.
 
 
@@ -48,7 +48,7 @@ Launch the backend API locally. The API is the application's interface to S3 and
     ```bash
     npm run dev
     ```
-* You can visit `http://127.0.0.1:8080/api/v0/feed` in your web browser to verify that the application is running. You should see a JSON payload. Feel free to play around with Postman to test the API's.
+* You can visit `http://localhost:8080/api/v0/feed` in your web browser to verify that the application is running. You should see a JSON payload. Feel free to play around with Postman to test the API's.
 
 ### 4. Frontend App
 Launch the frontend app locally.
@@ -69,7 +69,7 @@ Launch the frontend app locally.
     ```bash
     ionic serve
     ```
-* You can visit `http://127.0.0.1:8100` in your web browser to verify that the application is running. You should see a web interface.
+* You can visit `http://localhost:8100` in your web browser to verify that the application is running. You should see a web interface.
 
 
 
