@@ -17,26 +17,26 @@
 ## Deployment Pipeline
 ##### DockerHub showing containers that you have pushed
 <figure>
-    <img src="/DockerHub/DockerHub_Before_Pushing_Images_Screenshot.PNG"
+    <img src="/screenshots/DockerHub/DockerHub_Before_Pushing_Images_Screenshot.PNG"
          alt="DockerHub Before Pushing Images Screenshot">
     <figcaption>DockerHub Before Pushing Images Screenshot</figcaption>
 </figure>
 <figure>
-    <img src="/DockerHub/DockerHub_After_Pushing_Images_Screenshot.PNG"
+    <img src="/screenshots/DockerHub/DockerHub_After_Pushing_Images_Screenshot.PNG"
          alt="DockerHub After Pushing Images Screenshot">
     <figcaption>DockerHub After Pushing Images Screenshot</figcaption>
 </figure>
 
 ##### GitHub repository’s settings showing your Travis webhook (can be found in Settings - Webhook)
 <figure>
-    <img src="/Travis_CI/Travis_CI_Webhook.PNG"
+    <img src="/screenshots/Travis_CI/Travis_CI_Webhook.PNG"
          alt="Travis CI Webhook">
     <figcaption>Travis CI Webhook</figcaption>
 </figure>
 
 ##### Travis CI showing a successful build and deploy job
 <figure>
-    <img src="/Travis_CI/Travis_CI_Screenshot.PNG"
+    <img src="/screenshots/Travis_CI/Travis_CI_Screenshot.PNG"
          alt="Travis CI Screenshot">
     <figcaption>Travis CI Screenshot</figcaption>
 </figure>
@@ -47,7 +47,7 @@
 kubectl get pods
 ```
 <figure>
-    <img src="/Kubectl/kubectl_get_pods_Screenshot.PNG"
+    <img src="/screenshots/Kubectl/kubectl_get_pods_Screenshot.PNG"
          alt="kubectl get pods Screenshot">
     <figcaption>kubectl get pods Screenshot</figcaption>
 </figure>
@@ -57,12 +57,12 @@ kubectl get pods
 kubectl describe services
 ```
 <figure>
-    <img src="/Kubectl/kubectl_describe_services_1_Screenshot.PNG"
+    <img src="/screenshots/Kubectl/kubectl_describe_services_1_Screenshot.PNG"
          alt="kubectl describe services 1 Screenshot">
     <figcaption>kubectl describe services 1 Screenshot</figcaption>
 </figure>
 <figure>
-    <img src="/Kubectl/kubectl_describe_services_2_Screenshot.PNG"
+    <img src="/screenshots/Kubectl/kubectl_describe_services_2_Screenshot.PNG"
          alt="kubectl describe services 2 Screenshot">
     <figcaption>kubectl describe services 2 Screenshot</figcaption>
 </figure>
@@ -72,12 +72,12 @@ kubectl describe services
 kubectl describe hpa
 ```
 <figure>
-    <img src="/Kubectl/kubectl_describe_hpa_1_Screenshot.PNG"
+    <img src="/screenshots/Kubectl/kubectl_describe_hpa_1_Screenshot.PNG"
          alt="kubectl describe hpa 1 Screenshot">
     <figcaption>kubectl describe hpa 1 Screenshot</figcaption>
 </figure>
 <figure>
-    <img src="/Kubectl/kubectl_describe_hpa_2_Screenshot.PNG"
+    <img src="/screenshots/Kubectl/kubectl_describe_hpa_2_Screenshot.PNG"
          alt="kubectl describe_hpa 2 Screenshot">
     <figcaption>kubectl describe_hpa 2 Screenshot</figcaption>
 </figure>
@@ -88,18 +88,18 @@ kubectl logs {pod_name}
 ```
 
 <figure>
-    <img src="/Kubectl/kubectl_logs_backend_feed_Screenshot.PNG">
+    <img src="/screenshots/Kubectl/kubectl_logs_backend_feed_Screenshot.PNG">
     <figcaption>kubectl logs backend feed Screenshot</figcaption>
 </figure>
 <figure>
-    <img src="/Kubectl/kubectl_logs_backend_user_Screenshot.PNG">
+    <img src="/screenshots/Kubectl/kubectl_logs_backend_user_Screenshot.PNG">
     <figcaption>kubectl logs backend user Screenshot</figcaption>
 </figure>
 <figure>
-    <img src="/Kubectl/kubectl_logs_frontend_Screenshot.PNG">
+    <img src="/screenshots/Kubectl/kubectl_logs_frontend_Screenshot.PNG">
     <figcaption>kubectl logs frontend Screenshot</figcaption>
 </figure>
 <figure>
-    <img src="/Kubectl/kubectl_logs_reverse_proxy_Screenshot.PNG">
+    <img src="/screenshots/Kubectl/kubectl_logs_reverse_proxy_Screenshot.PNG">
     <figcaption>kubectl logs reverse proxy Screenshot</figcaption>
 </figure>
